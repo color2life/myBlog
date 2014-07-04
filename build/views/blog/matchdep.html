@@ -1,0 +1,5 @@
+<p>This is the blog/matchdep view.</p><section class="wrapper" tabindex="0"><div class="wrapper-container"><div class="blog-banner" style="background-color:#f9a818"><img src="/images/grunt.png" alt="#"></div><div class="blog-article"><h1>Dynamically Load Grunt Tasks</h1><p>Matchdep is a node package which automatically load dependencies from 'package.json' file.</p><p>It automatically load GruntJS tasks, it happend to me a lot whenever I installed new GruntJS plugin I forget to load it as a task in the 'Gruntfile.js'</p><h4>How to install</h4><pre>
+<code>npm install --save matchdep
+//then add next line to Gruntfile.js
+require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);</code>
+</pre><p>This will look into 'package.json' file and load dev dependencies strating with 'grunt-' load all of them into 'Gruntfile.js' as tasks.</p><p>more details <a href="https://www.npmjs.org/package/matchdep">npm matchdep</a></p></div><!-- footer --><footer role="contentinfo" class="footer"><p><small>© 2014. All Rights Reserved.</small></p></footer></div></section>
